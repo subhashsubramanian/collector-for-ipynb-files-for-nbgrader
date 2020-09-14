@@ -35,7 +35,7 @@ var numStudents = lastRow +1;
   // there are 33 characters before file id
   // https://drive.google.com/open?id=
   var filename = DriveApp.getFileById(fileId).getName();    
-  var fileRename = filename.substring(0,filename.indexOf(' ')); //get only first few characters till space 
+  var fileRename = filename.substring(0,filename.indexOf(' ')) + ".ipynb" ; //get only first few characters till space 
   DriveApp.getFileById(fileId).setName(fileRename) ;
   
   //create a folder by roll no if it doesn't exist
